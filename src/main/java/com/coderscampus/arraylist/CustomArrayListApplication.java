@@ -21,45 +21,52 @@ public class CustomArrayListApplication {
         superHeroes.add("ManBat");
         superHeroes.add("Silver Surfer");
         superHeroes.add("The Crimson Chin");
-        superHeroes.add("The Flash11");
-        superHeroes.add("The Flash12");
-        superHeroes.add("The Flash13");
-        superHeroes.add("The Flash14");
-        superHeroes.add("The Flash15");
-        superHeroes.add("The Flash16");
-        superHeroes.add("The Flash17");
-        superHeroes.add("The Flash18");
-        superHeroes.add("The Flash19");
-        superHeroes.add("The Flash121");
-        superHeroes.add("The Flash122");
-        superHeroes.add("The Flash123");
-        superHeroes.add("The Flash132");
-        superHeroes.add("The Flash124");
-        superHeroes.add("The Flash146");
-        superHeroes.add("The Flash167");
-        superHeroes.add("The Flash176");
-        superHeroes.add("The Flash154");
-        superHeroes.add("The Flash148");
-        superHeroes.add("The Flash189");
-        superHeroes.add("The Flash81");
-        superHeroes.add("The Flash7");
-        superHeroes.add("The Flash6");
-        superHeroes.add("The Flash5");
-        superHeroes.add("The Flash4");
-        superHeroes.add("The Flash3");
-        superHeroes.add("The Flash2");
+        superHeroes.add("The Hulk");
+        superHeroes.add("Mermaid Man");
+        superHeroes.add("Barnacle Boy");
+        superHeroes.add("Fireman");
+        superHeroes.add("Policeman");
+        superHeroes.add("EMT");
+        superHeroes.add("Goku Kakarot");
+        superHeroes.add("Peter Parker");
+        superHeroes.add("Captain America");
+        superHeroes.add("Aqua Man");
+        superHeroes.add("Rick Sanchez");
+        superHeroes.add("Human Torch");
+        superHeroes.add("Storm");
+        superHeroes.add("Cyborg");
+        superHeroes.add("Mr. Incredible");
+        superHeroes.add("Mrs. Incredible");
+        superHeroes.add("Mr. Fantastic");
+        superHeroes.add("Mobius Chair Wally West");
+        superHeroes.add("Spawn");
+        superHeroes.add("Luke Cage");
+        superHeroes.add("Green Lantern");
+        superHeroes.add("Jubilee");
+        superHeroes.add("DareDevil");
+        superHeroes.add("X-23");
+        superHeroes.add("Ant Man");
+        superHeroes.add("Wasp");
+        superHeroes.add("Scarlet Witch");
+        superHeroes.add("QuickSilver");
+        superHeroes.add("Cable");
+        superHeroes.add("Vision");
+        superHeroes.add("Ghost Rider");
+
+
 
 
         System.out.println("Super Heroes waiting to fight: ");
         System.out.println(superHeroes.getSize());
         System.out.println("The next Heros fighting are: ");
-        System.out.println(superHeroes.get(44));
-        System.out.println(superHeroes.get(16));
+        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
+        System.out.println("Vs.");
+        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
 
         System.out.println("-------------");
 
-        for (int i=0; i<superHeroes.getSize(); i++) {
-            System.out.println(superHeroes.get(i));
-        }
+//        for (int i=0; i<superHeroes.getSize(); i++) {
+//            System.out.println(superHeroes.get(i));
+//        }
     }
 }
