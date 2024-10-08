@@ -10,7 +10,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	public boolean add(T item) {
 		if(size == items.length){
 			Object[] newItems = new Object[items.length * 2];
-			for (int i = 0; i < items.length; i++) {
+			for (int i = 0; i < size; i++) {
 				newItems[i] = items[i];
 			}
 			items = newItems;
@@ -23,19 +23,19 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public boolean add(int index, T item) throws IndexOutOfBoundsException {
 		if (index < 0 || index > size){
-			throw new IndexOutOfBoundsException("Index " + index + " is out of bounds. Actual size is: " + size);
+			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds. Actual size is: " + size);
 		}
 
 		if(size == items.length){
-			Object[] newItems = new Object[items.length * 2];
-			for (int i = 0; i < items.length; i++) {
+			Object[] newItems = new Object[size * 2 + 1];
+			for (int i = 0; i < size; i++) {
 				newItems[i] = items[i];
 			}
 			items = newItems;
 		}
 
 		for (int i = size; i > index; i--) {
-			items[i] = items[i-1];
+			items[i] = items[i - 1];
 		}
 
 		items[index] = item;
@@ -49,17 +49,17 @@ public class CustomArrayList<T> implements CustomList<T> {
 	}
 
 	@Override
-	public T get(int index) {
-		if (index >= 0 && index < size) {
-			return (T) items[index];
+	public T get(int index) throws IndexOutOfBoundsException {
+		if (index < 0 || index >= size) {
+			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds.");
 		}
-		return null;
+		return (T) items[index];
 	}
 
 	@Override
 	public T remove(int index) throws IndexOutOfBoundsException {
 
-		if(index < 0 || index >= items.length) {
+		if(index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds.");
 		}
 
