@@ -2,10 +2,8 @@ package com.coderscampus.arraylist;
 
 public class CustomArrayListApplication {
     public static void main(String[] args) {
-        //Arrange
-        CustomArrayList<String> superHeroes = new CustomArrayList<>();
 
-        //Act
+        CustomArrayList<String> superHeroes = new CustomArrayList<>();
         superHeroes.add("Dead Pool");
         superHeroes.add("The Flash");
         superHeroes.add("Wolverine");
@@ -57,35 +55,12 @@ public class CustomArrayListApplication {
         superHeroes.add("Ghost Rider");
         superHeroes.add("BatMan");
 
-        //Assert principles
-        //Add at an index
         System.out.println(superHeroes.getSize());
         superHeroes.add(49, "Krypto1");
         System.out.println(superHeroes.getSize());
-//        superHeroes.add(-1, "Krpto2");
-//        superHeroes.add(100000, "Krypto3");
-
-        //Get and Remove
         System.out.println(superHeroes.get(50));
-//        superHeroes.get(-1);
-//        superHeroes.get(100000);
         superHeroes.remove(1);
-//        superHeroes.remove(-1);
-//        superHeroes.remove(100000);
         System.out.println(superHeroes.getSize());
 
-
-//        System.out.println("Super Heroes waiting to fight: ");
-//        System.out.println(superHeroes.getSize());
-//        System.out.println("The next Heros fighting are: ");
-//        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
-//        System.out.println("Vs.");
-//        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
-//
-//        System.out.println("-------------");
-
-//        for (int i=0; i<superHeroes.getSize(); i++) {
-//            System.out.println(superHeroes.get(i));
-//        }
     }
 }

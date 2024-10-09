@@ -1,24 +1,12 @@
 package com.coderscampus.arraylist;
 
-import java.lang.Object;
-import java.util.*;
-
 public class CustomArrayList<T> implements CustomList<T> {
-    Object[] items = new Object[10];
-    int size;
+    private Object[] items = new Object[10];
+    private int size;
 
     @Override
     public boolean add(T item) {
-        if (size == items.length) {
-            Object[] newItems = new Object[size * 2 + 1];
-            for (int i = 0; i < size; i++) {
-                newItems[i] = items[i];
-            }
-            items = newItems;
-        }
-        items[size] = item;
-        size++;
-        return true;
+        return add(size, item);
     }
 
     @Override
@@ -28,7 +16,7 @@ public class CustomArrayList<T> implements CustomList<T> {
         }
 
         if (size == items.length) {
-            Object[] newItems = new Object[size * 2 + 1];
+            Object[] newItems = new Object[size * 2];
             for (int i = 0; i < size; i++) {
                 newItems[i] = items[i];
             }
@@ -49,20 +37,18 @@ public class CustomArrayList<T> implements CustomList<T> {
         return size;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public T get(int index) throws IndexOutOfBoundsException {
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds. Actual size is: " + size);
-        }
+        validateIndexBounds(index);
         return (T) items[index];
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public T remove(int index) throws IndexOutOfBoundsException {
 
-        if (index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds. Actual size is: " + size);
-        }
+        validateIndexBounds(index);
 
         T removedItem = (T) items[index];
 
@@ -75,8 +61,9 @@ public class CustomArrayList<T> implements CustomList<T> {
         return removedItem;
     }
 
-//	public int randomNumGenerator () {
-//        return new Random().nextInt(0, size);
-//	}
-//
+    private void validateIndexBounds(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds. Actual size is: " + size);
+        }
+    }
 }
