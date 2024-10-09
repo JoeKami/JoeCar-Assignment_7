@@ -56,14 +56,14 @@ public class CustomArrayListApplication {
 
 
 
-        System.out.println("Super Heroes waiting to fight: ");
-        System.out.println(superHeroes.getSize());
-        System.out.println("The next Heros fighting are: ");
-        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
-        System.out.println("Vs.");
-        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
-
-        System.out.println("-------------");
+//        System.out.println("Super Heroes waiting to fight: ");
+//        System.out.println(superHeroes.getSize());
+//        System.out.println("The next Heros fighting are: ");
+//        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
+//        System.out.println("Vs.");
+//        System.out.println(superHeroes.get(superHeroes.randomNumGenerator()));
+//
+//        System.out.println("-------------");
 
 //        for (int i=0; i<superHeroes.getSize(); i++) {
 //            System.out.println(superHeroes.get(i));

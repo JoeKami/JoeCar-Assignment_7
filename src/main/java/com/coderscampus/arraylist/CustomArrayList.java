@@ -51,7 +51,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public T get(int index) throws IndexOutOfBoundsException {
 		if (index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds.");
+			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds. Actual size is: " + size);
 		}
 		return (T) items[index];
 	}
@@ -74,8 +74,8 @@ public class CustomArrayList<T> implements CustomList<T> {
 		return removedItem;
 	}
 
-	public int randomNumGenerator () {
-        return new Random().nextInt(0, size);
-	}
-	
+//	public int randomNumGenerator () {
+//        return new Random().nextInt(0, size);
+//	}
+//
 }
