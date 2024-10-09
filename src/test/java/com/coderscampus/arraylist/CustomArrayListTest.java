@@ -44,13 +44,12 @@ class CustomArrayListTest {
         superHeroes.add(1, "Monkey D. Luffy");
         superHeroes.add(2, "Wally West");
         superHeroes.add(3, "Invincible");
-        superHeroes.add(4,"SpiderMan4");
-        superHeroes.add(5,"SpiderMan5");
-        superHeroes.add(6,"SpiderMan6");
-        superHeroes.add(7,"SpiderMan7");
-        superHeroes.add(8,"SpiderMan8");
-        superHeroes.add(9,"SpiderMan9");
-
+        superHeroes.add(4, "SpiderMan4");
+        superHeroes.add(5, "SpiderMan5");
+        superHeroes.add(6, "SpiderMan6");
+        superHeroes.add(7, "SpiderMan7");
+        superHeroes.add(8, "SpiderMan8");
+        superHeroes.add(9, "SpiderMan9");
 
 
         //Assert
@@ -60,7 +59,7 @@ class CustomArrayListTest {
         assertEquals(11, superHeroes.getSize());
         assertEquals("Monkey D. Luffy", superHeroes.get(1));
         assertEquals("Invincible", superHeroes.get(4));
-        
+
 
         Exception exception1 = assertThrows(IndexOutOfBoundsException.class, () -> {
             superHeroes.add(-1, "SuperMan");

@@ -75,7 +75,6 @@ public class CustomArrayListApplication {
         System.out.println(superHeroes.getSize());
 
 
-
 //        System.out.println("Super Heroes waiting to fight: ");
 //        System.out.println(superHeroes.getSize());
 //        System.out.println("The next Heros fighting are: ");
