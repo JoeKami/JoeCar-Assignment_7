@@ -9,7 +9,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	@Override
 	public boolean add(T item) {
 		if(size == items.length){
-			Object[] newItems = new Object[items.length * 2];
+			Object[] newItems = new Object[size * 2 + 1];
 			for (int i = 0; i < size; i++) {
 				newItems[i] = items[i];
 			}
@@ -60,7 +60,7 @@ public class CustomArrayList<T> implements CustomList<T> {
 	public T remove(int index) throws IndexOutOfBoundsException {
 
 		if(index < 0 || index >= size) {
-			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds.");
+			throw new IndexOutOfBoundsException("Index: " + index + " is out of bounds. Actual size is: " + size);
 		}
 
 		T removedItem = (T) items[index];

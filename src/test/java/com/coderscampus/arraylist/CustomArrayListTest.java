@@ -134,6 +134,16 @@ class CustomArrayListTest {
         assertEquals(3, superHeroes.getSize());
         assertEquals("Johnny SilverHand", superHeroes.get(0));
         assertEquals("Invincible", superHeroes.get(2));
+        Exception exception1 = assertThrows(IndexOutOfBoundsException.class, () -> {
+            superHeroes.remove(-1);
+        });
+        assertEquals("Index: -1 is out of bounds. Actual size is: 3", exception1.getMessage());
+
+        Exception exception2 = assertThrows(IndexOutOfBoundsException.class, () -> {
+            superHeroes.remove(100000);
+        });
+        assertEquals("Index: 100000 is out of bounds. Actual size is: 3", exception2.getMessage());
+
     }
 
 }
